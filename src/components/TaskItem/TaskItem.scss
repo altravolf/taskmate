@@ -1,0 +1,46 @@
+li {
+    box-sizing: border-box;
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 5px;
+
+
+
+    &.completed {
+        box-shadow: 0 1px 3px 1px #11ae008a;
+
+        &:hover {
+            cursor: pointer;
+            box-shadow: 0 1px 3px 1px #11ae00;
+
+        }
+    }
+
+    &.notCompleted {
+        box-shadow: 0 1px 3px 1px #bd00008a;
+
+        &:hover {
+            cursor: pointer;
+            box-shadow: 0 1px 3px 1px #bd0000;
+        }
+    }
+
+    &:not(:last-of-type) {
+        margin-bottom: 1.3rem;
+    }
+
+    button {
+        background-color: #e80606;
+        color: white;
+        border: none;
+        padding: 0.4rem 0.7rem;
+        border-radius: 3px;
+
+        &:hover {
+            cursor: pointer;
+            background-color: #ff0000;
+        }
+    }
+}

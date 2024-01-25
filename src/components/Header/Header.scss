@@ -1,0 +1,18 @@
+.Header {
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #dfdfdf;
+    padding: 0.5rem 0;
+
+    .img-container {
+        max-width: 70px;
+    }
+
+    .title {
+        font-size: 2.5rem;
+        font-family: 'Pacifico', cursive;
+        color: #0066da;
+    }
+}

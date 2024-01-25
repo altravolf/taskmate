@@ -1,0 +1,68 @@
+.TaskList {
+    .ul-container {
+        list-style-type: none;
+        // border: 1px solid #dfdfdf;
+        padding: 1.5rem;
+        border-radius: 5px;
+        max-width: 500px;
+        margin: auto;
+        margin-top: 0.5rem;
+        box-sizing: border-box;
+        box-shadow: 0 1px 3px 1px #dfdfdf;
+    }
+
+
+    .toggleButton {
+        display: flex;
+        justify-content: center;
+        margin: 1rem;
+
+        button {
+            border: none;
+            padding: 0.4rem 0.7rem;
+            border-radius: 3px;
+            transition: 0.2s ease-in;
+
+            &.hide {
+                background-color: #0000d1;
+                color: white;
+
+                &:hover {
+                    cursor: pointer;
+                    transition: 0.2s ease-out;
+                    background-color: #0000f2
+                }
+            }
+
+            &.show {
+                background-color: #006c00;
+                color: white;
+
+                &:hover {
+                    cursor: pointer;
+                    transition: 0.2s ease-in;
+                    background-color: #007e00;
+                }
+            }
+        }
+    }
+}
+
+// @media screen and (min-width: 768px) and (max-width: 1024px) {
+//     .TaskList {
+//         .ul-container {
+//             width: 50%;
+//         }
+//     }
+
+// }
+
+@media screen and (max-width: 537px) {
+    .TaskList {
+        .ul-container {
+            margin-left: 2rem;
+            margin-right: 2rem;
+        }
+    }
+
+}
