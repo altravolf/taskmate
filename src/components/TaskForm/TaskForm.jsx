@@ -1,26 +1,29 @@
-import { useState } from "react";
 import './TaskForm.scss';
+import { useForm } from "react-hook-form"
 
 function TaskForm({ addTask }) {
+    const {
+        register,
+        handleSubmit,
+        reset,
+        formState: { errors },
+    } = useForm()
 
-    const [input, setInput] = useState("");
-
-    const handleInput = (e) => {
-        setInput(e.target.value);
+    const onSubmit = (data) => {
+        addTask(data);
+        reset();
     }
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        addTask(input)
-        setInput("");
-    }
 
     return (
         <div className="TaskForm">
-            <form action="" onSubmit={handleSubmit}>
+            <form action="" onSubmit={handleSubmit(onSubmit)}>
 
-                <input type="text" name="task" id="task" placeholder="Enter a Task" value={input} onChange={handleInput} autoComplete="off" />
-
+                <input type="text" name="task" id="task" placeholder="Enter Task" autoComplete="off" {...register("task", { required: true, minLength: 3 },)} className={`${errors.task ? "error" : null}`} />
+                <select name="status" id="" {...register("status")}>
+                    <option value={false}>Pending</option>
+                    <option value={true}>Completed</option>
+                </select>
                 <div className="">
                     <button>Add Task</button>
                 </div>

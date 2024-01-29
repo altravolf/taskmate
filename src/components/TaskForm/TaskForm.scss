@@ -10,6 +10,7 @@
         width: 100%;
         justify-content: center;
         align-items: center;
+        gap: 0.5rem;
 
 
         input {
@@ -18,6 +19,12 @@
             padding: 0.5rem;
             box-sizing: border-box;
             width: 100%;
+
+
+            &:focus-visible {
+                outline: 1px solid #6c259c;
+                border: 0;
+            }
         }
 
         button {
@@ -26,7 +33,7 @@
             color: white;
             padding: 0.5rem;
             border-radius: 5px;
-            margin-left: 0.5rem;
+            // margin-left: 0.5rem;
             width: 5rem;
             transition: .2s ease-in;
 
@@ -34,6 +41,39 @@
                 cursor: pointer;
                 background-color: #8c31c9;
                 transition: .2s ease-out;
+            }
+        }
+
+        select {
+            border: 1px solid #dfdfdf;
+            border-radius: 5px;
+            padding: 0.5rem;
+            box-sizing: border-box;
+
+
+            &:focus {
+                border: 1px solid #6c259c;
+            }
+
+            option {
+                border: 1px solid #dfdfdf;
+                border-radius: 5px;
+                padding: 0.5rem;
+                box-sizing: border-box;
+
+
+            }
+        }
+
+        .error {
+            border: 1px solid red;
+
+            &:focus {
+                border: 1px solid red;
+            }
+
+            &:focus-visible {
+                outline: 1px solid red;
             }
         }
     }

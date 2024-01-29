@@ -10,21 +10,20 @@ function TaskList() {
     const [tasks, setTasks] = useState([{
         id: uuid(),
         title: 'Walk the dog',
-        completed: false
+        status: false
     },
     {
         id: uuid(),
         title: 'Play with cats',
-        completed: true
+        status: true
     },
     {
         id: uuid(),
         title: 'Feed the fish',
-        completed: false
+        status: false
     }]);
 
     const [isToggle, setIsToggle] = useState(true);
-
     const handleDelete = (taskId) => {
         setTasks(() => {
             return tasks.filter((el) => el.id !== taskId)
@@ -35,9 +34,9 @@ function TaskList() {
         setIsToggle(!isToggle);
     }
 
-    const addTask = (newTask) => {
+    const addTask = ({ task, status }) => {
         setTasks(() => {
-            return [...tasks, { id: uuid(), title: newTask, completed: false }];
+            return [...tasks, { id: uuid(), title: task, status: JSON.parse(status) }];
         })
     }
 

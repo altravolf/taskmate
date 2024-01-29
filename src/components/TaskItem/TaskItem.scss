@@ -9,21 +9,21 @@ li {
 
 
     &.completed {
-        box-shadow: 0 1px 3px 1px #11ae008a;
+        box-shadow: 0 1px 3px 1px #11ae00;
 
         &:hover {
             cursor: pointer;
-            box-shadow: 0 1px 3px 1px #11ae00;
+            box-shadow: 0 1px 3px 1px darken(#11ae00, 10%);
 
         }
     }
 
     &.notCompleted {
-        box-shadow: 0 1px 3px 1px #bd00008a;
+        box-shadow: 0 1px 3px 1px #ed0000;
 
         &:hover {
             cursor: pointer;
-            box-shadow: 0 1px 3px 1px #bd0000;
+            box-shadow: 0 1px 3px 1px darken(#ed0000, 10%);
         }
     }
 
